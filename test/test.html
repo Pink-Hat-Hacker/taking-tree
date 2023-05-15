@@ -1,0 +1,13 @@
+<html>
+    <head>
+        <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@7.0.0/dist/aframe-extras.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-physics-system@v4.2.2/dist/aframe-physics-system.min.js"></script>
+    </head>
+    <body>
+        <a-scene physics="debug: true; gravity: -9.8">
+            <a-plane static-body scale="50 50 1" rotation="-90 0 0" color="gray" position="0 0 -40"></a-plane>
+            <a-sphere dynamic-body grabbable color="blue" radius="1" position="10 5 -40" ></a-sphere>
+        </a-scene>
+    </body>
+</html>

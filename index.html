@@ -1,0 +1,119 @@
+<!-- https://dev.to/drnoir/maze-generation-in-10-mins-with-aframe-ckm -->
+<!-- https://n5ro.github.io/aframe-physics-system/ -->
+<!-- https://www.youtube.com/watch?v=WtpUDDhqeQk -->
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+    <!-- Environment Library -->
+    <script src="https://unpkg.com/aframe-environment-component@1.3.2/dist/aframe-environment-component.min.js"></script>
+    <!-- Physics and collisions -->
+    <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@7.0.0/dist/aframe-extras.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-physics-system@v4.2.2/dist/aframe-physics-system.min.js"></script>
+  </head>
+  <body>
+    <a-scene physics="debug: true; debugDrawMode: 1;">
+      <a-entity
+        camera
+        kinematic-body
+        wasd-controls="acceleration: 50"
+        look-controls="pointerLockEnabled: true;""
+        position="0 1.5 30"
+      ></a-entity>
+      
+      <a-entity 
+        environment="preset: forest; skyType: gradient; skyColor: #850200; fog: 0.9; horizonColor: #000000; groundTexture: walkernoise; groundColor: #5b3726; groundColor2: #4c2919; dressingColor: #495e31"
+      ></a-entity>
+      <a-gltf-model id="tree" src="bodyHorror_s2.glb" tree shadow> </a-gltf-model>
+      
+      <!-- maze -->
+      <!-- around the tree -->
+      <a-box id="north"
+        color="#352929"
+        width="30"
+        height="7"
+        position="0 0 -10"
+      ></a-box>
+      <a-box id="south"
+        color="#352929"
+        width="30"
+        height="7"
+        position="0 0 10"
+      ></a-box>
+      <a-box id="east"
+        color="#352929"
+        width="10"
+        height="7"
+        position="15 0 0"
+        rotation="0 -90 0"
+      ></a-box>
+      <a-box id="west"
+        color="#352929"
+        width="10"
+        height="7"
+        position="-15 0 0"
+        rotation="0 -90 0"
+      ></a-box>
+
+      <!-- leading to the tree -->
+      <a-box id="northEast"
+        color="#352929"
+        width="30"
+        height="7"
+        position="24.3 0 -20.5"
+        rotation="0 45 0"
+      ></a-box>
+      <a-box id="northEast2"
+        color="#352929"
+        width="30"
+        height="7"
+        position="25.310 0 -15.3"
+        rotation="0 45 0"
+      ></a-box>
+
+      <a-box id="northWest"
+        color="#352929"
+        width="30"
+        height="7"
+        position="-25 0 -20"
+        rotation="0 135 0"
+      ></a-box>
+      <a-box id="northWest2"
+        color="#352929"
+        width="30"
+        height="7"
+        position="-25.4 0 -15"
+        rotation="0 135 0"
+      ></a-box>
+      
+      <a-box id="southEast"
+        color="#352929"
+        width="30"
+        height="7"
+        position="24.8 0 20"
+        rotation="0 315 0"
+      ></a-box>
+      <a-box id="southEast2"
+        color="#352929"
+        width="30"
+        height="7"
+        position="25.3 0 15"
+        rotation="0 315 0"
+      ></a-box>
+
+      <a-box id="southWest"
+        color="#352929"
+        width="30"
+        height="7"
+        position="-24.8 0 20"
+        rotation="0 225 0"
+      ></a-box>
+      <a-box id="southWest2"
+        color="#352929"
+        width="30"
+        height="7"
+        position="-25.3 0 15"
+        rotation="0 225 0"
+      ></a-box>
+    </a-scene>
+  </body>
+</html>
