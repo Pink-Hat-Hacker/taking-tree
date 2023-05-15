@@ -11,7 +11,12 @@
     <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-physics-system@v4.2.2/dist/aframe-physics-system.min.js"></script>
   </head>
   <body>
-    <button src="takingtree.html"> funny haha taking tree</button>
+
+    <button 
+      onclick="window.location.href='takingtree.html'" 
+      style="position: absolute; top: 10px; left: 10px; padding: 10px; background-color: black; color: white; border-radius: 5px; z-index: 1;">
+    funny haha taking tree</button>
+
     <a-scene physics="debug: true; debugDrawMode: 1;">
       <a-entity
         camera
@@ -24,7 +29,7 @@
       <a-entity 
         environment="preset: forest; skyType: gradient; skyColor: #850200; fog: 0.9; horizonColor: #000000; groundTexture: walkernoise; groundColor: #5b3726; groundColor2: #4c2919; dressingColor: #495e31"
       ></a-entity>
-      <a-gltf-model id="tree" src="bodyHorror_s2.glb" tree shadow> </a-gltf-model>
+      <a-gltf-model id="tree" src="assets/bodyHorror_s2.glb" tree shadow> </a-gltf-model>
       
       <!-- maze -->
       <!-- around the tree -->
