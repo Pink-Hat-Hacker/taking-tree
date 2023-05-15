@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>
+            Taking Tree
+        </title>
+        
+        <!-- Style -->
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Waiting+for+the+Sunrise&display=swap" rel="stylesheet">
+        
+        <!-- 3D Object viewer -->
+        <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+        <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+    </head>
+    <body>
+        <div id="container">
+            <div id="title">
+                <h1>TaKiNG TReE</h1>
+                <!-- <a href="index.html">
+                    <button>VR</button>
+                </a> -->
+            </div>
+            <div id="theside">
+                <img src="littleboy.png">
+            </div>
+            <div id="aside">
+                <model-viewer 
+                    src="bodyHorror_s2.glb" 
+                    alt="Taking Tree Body Horror" 
+                    auto-rotate="true"
+                    camera-controls 
+                    ar
+                ></model-viewer>
+            </div>
+        </div>
+    </body>
+</html>

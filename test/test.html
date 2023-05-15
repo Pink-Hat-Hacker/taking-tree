@@ -6,8 +6,22 @@
     </head>
     <body>
         <a-scene physics="debug: true; gravity: -9.8">
+            <!-- <a-entity
+                camera
+                kinematic-body
+                wasd-controls="acceleration: 50"
+                look-controls="pointerLockEnabled: true;"
+            ></a-entity> -->
+
             <a-plane static-body scale="50 50 1" rotation="-90 0 0" color="gray" position="0 0 -40"></a-plane>
-            <a-sphere dynamic-body grabbable color="blue" radius="1" position="10 5 -40" ></a-sphere>
+            <a-sphere dynamic-body grabbable color="blue" radius="1" position="10 7 -40" ></a-sphere>
+            <a-box static-body id="north"
+                color="#352929"
+                width="10"
+                height="3"
+                position="-10 0 -40"
+            ></a-box>
+            
         </a-scene>
     </body>
 </html>

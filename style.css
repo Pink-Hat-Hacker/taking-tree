@@ -1,0 +1,63 @@
+/* The webpage overall styling */
+@media screen and (min-width: 600px) {
+    #aside {
+        height: 100vh;
+        width: 100vw;
+        /* position: absolute;
+        top: calc(50% - 250px);
+        right: 7%; */
+    }
+
+    #aside model-viewer {
+        height: 100vh;
+        width: 100vw;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border: none;
+    }
+}
+/* @media (max-width: 1500px) {
+    body h1#title {
+        display: none;
+    }    
+
+    body:after {
+        content: "There is not enough space to show taking tree";
+    } 
+} */
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Waiting for the Sunrise', cursive;
+    font-size: 100px;
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+}
+
+#title {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+/*  This is for styling the main container that holds everything */
+
+#container {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background: #960000;
+}
+
+#theside {
+    position: absolute;
+    margin-top: 15%;
+    margin-left: 20%;
+}
+#theside img {
+    width: 80%;
+}
+
+/* This styles the aside container */
+
+
